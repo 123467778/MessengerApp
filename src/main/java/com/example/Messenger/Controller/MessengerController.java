@@ -4,6 +4,8 @@ import com.example.Messenger.Base.Model.Message;
 import com.example.Messenger.Base.Service.MessageService;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/message")
+@AllArgsConstructor
 
 public class MessengerController {
 
@@ -27,9 +30,9 @@ public class MessengerController {
      * @param messageService MessageService
      */
    
-    public MessengerController(MessageService messageService){
-        this.messageService=messageService;
-    }
+//    public MessengerController(MessageService messageService){
+//        this.messageService=messageService;
+//    }
 
     
     /**

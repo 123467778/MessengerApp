@@ -3,7 +3,7 @@ package com.example.Messenger.Base.Model;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.data.annotation.Transient;
@@ -21,7 +21,7 @@ public class Message {
 	
 
     private Long id ;
-    @NotNull
+ 
     @NotBlank(message="Sender should not be empty")
    
     private String sender;
@@ -34,9 +34,10 @@ public class Message {
     @Transient
     private String displayMessage;
 
-    public String getDisplayMessage() {
-		return displayMessage;
-	}
+//    
+//    public String getDisplayMessage() {
+//		return displayMessage;
+//	}
 
 //	public void setDisplayMessage(String displayMessage) {
 //		this.displayMessage = displayMessage;

@@ -9,6 +9,8 @@ import org.springframework.web.server.ResponseStatusException;
 import com.example.Messenger.Base.Model.Message;
 import com.example.Messenger.Base.Model.Status;
 
+import lombok.AllArgsConstructor;
+
 import java.util.List;
 
 /**
@@ -17,6 +19,7 @@ import java.util.List;
  */
 
 @Service
+@AllArgsConstructor
 public class MessageServiceImpl implements MessageService {
 
 	private final MessageRepository messageRepository;
@@ -24,12 +27,12 @@ public class MessageServiceImpl implements MessageService {
 	/**
 	 * This constructor is used to pass object dependencies to this class.
 	 * 
-	 * @param messageRepository
+	 * @param messageRepository inject the dependencies of messageRepository
 	 */
 
-	public MessageServiceImpl(MessageRepository messageRepository) {
-		this.messageRepository = messageRepository;
-	}
+//	public MessageServiceImpl(MessageRepository messageRepository) {
+//		this.messageRepository = messageRepository;
+//	}
 
 	/**
 	 * This method get the list of all messages from the Table Message.
